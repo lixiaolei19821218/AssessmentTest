@@ -1,0 +1,22 @@
+﻿<Window x:Class="AssessmentTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        xmlns:k="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
+        Title="AssessmentTest" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Pricing Spec"/>
+        <ComboBox Grid.Column="1" DataContext="{Binding Path=PricingSpecRows}" DisplayMemberPath="Name"/>
+        <Label Content="Timestamp" Grid.Row="1"/>
+        <Label Content="{Binding Path=TimeStamp}" Grid.Row="1" Grid.Column="1"/>
+        <k:DataGrid Grid.Row="2" Grid.ColumnSpan="2" DataContext=""/>
+    </Grid>
+</Window>
