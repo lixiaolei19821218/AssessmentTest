@@ -53,6 +53,9 @@ namespace AssessmentTest
             }
         }
 
+        /// <summary>
+        /// Indcate whether in unsubscribing or subscribing
+        /// </summary>
         private Status status;
         public Status Status
         {
@@ -67,6 +70,9 @@ namespace AssessmentTest
             }
         }
 
+        /// <summary>
+        /// Command for MainWindow Element
+        /// </summary>
         public DelegateCommand SwitchCommand { get; set; }
 
         public MainWindowViewModel()
@@ -81,24 +87,19 @@ namespace AssessmentTest
             : this()
         {
             DispatchProvider = dispatchProvider;
-        }
-
-        /// <summary>
-        /// To Subscribe With WPF Container Synchronization
-        /// </summary>
-        /// <param name="dispatchProvider">WPF Container</param>
-        public void SubscribeWithWPFSynchronization(System.Windows.FrameworkElement dispatchProvider)
-        {
-            dataSource.SubscribeWithWPFSynchronization(callback, dispatchProvider);
-        }
+        }        
 
         private void Callback(FinancialData data)
         {
             Data = data;
-            //DataContext changed, restore ComboBox selection status.           
+            //DataContext changed, restore ComboBox selection status. Suppose PricingSpecs are always CL, SPX and ZC.
             CurrentPricingSpecIndex = lastSelectedPricingSpecIndex;
         }
 
+        /// <summary>
+        /// Start or stop receiving data.
+        /// </summary>
+        /// <param name="obj"></param>
         private void Switch(object obj)
         {
             if (Status == Status.Paused)
@@ -111,17 +112,7 @@ namespace AssessmentTest
                 dataSource.Unsubscribe(Callback);
                 Status = Status.Paused;
             }
-        }
-
-        private void Run(object obj)
-        {
-            dataSource.SubscribeWithWPFSynchronization(callback, DispatchProvider);
-        }
-
-        private void Pause(object obj)
-        {
-            dataSource.Unsubscribe(Callback);
-        }
+        }        
 
         /// <summary>
         /// Call DataSource.Dispose() to shut down the data source.

@@ -8,7 +8,7 @@ using System.Windows.Data;
 namespace AssessmentTest
 {
     /// <summary>
-    /// Update Button.Content when Status changed.
+    /// Update Button.Content when Status changing.
     /// </summary>
     class StatusConverter : IValueConverter
     {

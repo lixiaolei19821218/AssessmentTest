@@ -6,6 +6,9 @@ using System.Windows.Input;
 
 namespace AssessmentTest
 {
+    /// <summary>
+    /// Command Class for ViewModel
+    /// </summary>
     class DelegateCommand : ICommand
     {
         readonly Action<object> _execute;

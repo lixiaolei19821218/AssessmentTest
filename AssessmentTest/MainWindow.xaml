@@ -3,17 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
         xmlns:k="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
         xmlns:local="clr-namespace:AssessmentTest"
-        Title="AssessmentTest" Height="350" Width="525" Closing="Window_Closing">
+        Title="{Binding Path=Status, StringFormat=AssessmentTest - {0}}" Height="350" Width="525" Closing="Window_Closing">
     <Window.Resources>
         <local:ForegroundConverter x:Key="foregroundConverter"/>
         <local:StatusConverter x:Key="statusConverter"/>
+        <Style TargetType="k:DataGridCell">
+            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content.Text, Converter={StaticResource ResourceKey=foregroundConverter}}"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <GroupBox Margin="5" Header="{Binding Path=Status}">
+        <GroupBox Margin="5" Header="Financial Data">
             <Grid Margin="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -31,16 +34,11 @@
                 <k:DataGrid Grid.Row="2" Grid.ColumnSpan="2" ItemsSource="{Binding ElementName=comboBoxPricingSpec, Path=SelectedItem.ContractRows}" AutoGenerateColumns="False" IsReadOnly="True">
                     <k:DataGrid.Columns>
                         <k:DataGridTextColumn Header="Expiration" Binding="{Binding Path=Expiration}"/>
-                        <k:DataGridTextColumn Header="Volatility" Binding="{Binding Path=Volatility, StringFormat={}{0:0.00%}}"/>
-                        <k:DataGridTextColumn Header="Vol Change" Binding="{Binding Path=VolChange, StringFormat={}{0:0.00%}}"/>
-                        <k:DataGridTextColumn Header="Tick Change" Binding="{Binding Path=TickChange, StringFormat={}{0:0.00%}}"/>
+                        <k:DataGridTextColumn Header="Volatility" Binding="{Binding Path=Volatility, StringFormat={}{0:P2}}"/>                           
+                        <k:DataGridTextColumn Header="Vol Change" Binding="{Binding Path=VolChange, StringFormat={}{0:P2}}"/>
+                        <k:DataGridTextColumn Header="Tick Change" Binding="{Binding Path=TickChange, StringFormat={}{0:P2}}"/>
                         <k:DataGridTextColumn Header="Reference Future" Binding="{Binding Path=ReferenceFuture}"/>
-                    </k:DataGrid.Columns>
-                    <k:DataGrid.CellStyle>
-                        <Style TargetType="k:DataGridCell">
-                            <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Self}, Path=Content.Text, Converter={StaticResource ResourceKey=foregroundConverter}}"/>
-                        </Style>
-                    </k:DataGrid.CellStyle>
+                    </k:DataGrid.Columns>                    
                 </k:DataGrid>
             </Grid>
         </GroupBox>
