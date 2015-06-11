@@ -11,9 +11,13 @@ namespace AssessmentTest
         {
             InitializeComponent();            
 
-            MainWindowViewModel vm = new MainWindowViewModel();
-            vm.SubscribeWithWPFSynchronization(this);
+            MainWindowViewModel vm = new MainWindowViewModel(this);            
             DataContext = vm;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            (DataContext as MainWindowViewModel).ShutDown();
         }      
     }
 }

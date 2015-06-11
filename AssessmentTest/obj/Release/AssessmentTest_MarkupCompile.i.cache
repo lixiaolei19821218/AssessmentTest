@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Debug\
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\
 AssessmentTest
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\App.xaml
 11151548125
 
@@ -16,5 +16,5 @@ C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\Assessment
 12-351901223
 MainWindow.xaml;
 
-False
+True
 

@@ -7,6 +7,9 @@ using System.Windows.Media;
 
 namespace AssessmentTest
 {
+    /// <summary>
+    /// Convert GridCell Foreground depending on number's value.
+    /// </summary>
     class ForegroundConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

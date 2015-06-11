@@ -12,3 +12,5 @@ c:\users\charles\documents\visual studio 2013\Projects\AssessmentTest\Assessment
 c:\users\charles\documents\visual studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Debug\AssessmentTest.pdb
 C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Debug\AssessmentTest_MarkupCompile.lref
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\bin\Debug\Liquid.AssessmentLibrary.dll
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\bin\Debug\WPFToolkit.dll

@@ -1,0 +1,16 @@
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\bin\Release\AssessmentTest.exe
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\bin\Release\AssessmentTest.pdb
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\bin\Release\Liquid.AssessmentLibrary.dll
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\bin\Release\WPFToolkit.dll
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest.csprojResolveAssemblyReference.cache
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\MainWindow.g.cs
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\App.g.cs
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest_MarkupCompile.cache
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest_MarkupCompile.lref
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\MainWindow.baml
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest.g.resources
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest.Properties.Resources.resources
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest.csproj.GenerateResource.Cache
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest.exe
+C:\Users\Charles\Documents\Visual Studio 2013\Projects\AssessmentTest\AssessmentTest\obj\Release\AssessmentTest.pdb

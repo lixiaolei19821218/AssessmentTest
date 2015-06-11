@@ -3,16 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
         xmlns:k="clr-namespace:Microsoft.Windows.Controls;assembly=WPFToolkit"
         xmlns:local="clr-namespace:AssessmentTest"
-        Title="AssessmentTest" Height="350" Width="525">
+        Title="AssessmentTest" Height="350" Width="525" Closing="Window_Closing">
     <Window.Resources>
         <local:ForegroundConverter x:Key="foregroundConverter"/>
+        <local:StatusConverter x:Key="statusConverter"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <GroupBox Margin="5" Header="Financial Data">
+        <GroupBox Margin="5" Header="{Binding Path=Status}">
             <Grid Margin="5">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -43,6 +44,6 @@
                 </k:DataGrid>
             </Grid>
         </GroupBox>
-        <Button Margin="5" Grid.Row="1" Content="Pause" Command="{Binding Path=PauseCommand}"/>
+        <Button Margin="5" Grid.Row="1" Content="{Binding Path=Status, Converter={StaticResource ResourceKey=statusConverter}}" Command="{Binding Path=SwitchCommand}"/>
     </Grid>            
 </Window>
